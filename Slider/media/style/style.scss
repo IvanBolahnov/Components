@@ -61,10 +61,10 @@ html, body {
         border-radius: 50%;
         overflow: hidden;
         cursor: pointer;
-        fill: #fff4;
+        fill: #eee4;
 
         &:hover, &:focus-visible {
-            fill: #fff;
+            fill: #eee;
         }
 
         svg {
@@ -72,10 +72,5 @@ html, body {
             transition: fill .2s;
 
         }
-    }
-
-    &__preview {
-        height: 50px;
-        background: #0ff;
     }
 }
