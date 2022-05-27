@@ -30,6 +30,7 @@ html,body{width: 100%;height: 100%;display: flex;justify-content: center;align-i
         overflow: hidden;
         box-sizing: border-box;
         border: var(--input-S-color) solid 2px;
+        background: var(--input-P-light-color);
     }
 
     &__check {
@@ -88,6 +89,7 @@ html,body{width: 100%;height: 100%;display: flex;justify-content: center;align-i
         box-sizing: border-box;
         border: var(--input-S-color) 2px solid;
         overflow: hidden;
+        background: var(--input-P-light-color);
     }
 
     &__check {
