@@ -132,7 +132,6 @@ html, body {
   height: 10px;
   position: relative;
   left: -11px;
-  top: 0.2px;
   -webkit-transition: left 0.1s;
   transition: left 0.1s;
   stroke: var(--input-S-color);
