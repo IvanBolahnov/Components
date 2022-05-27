@@ -128,8 +128,10 @@ html, body {
   overflow: hidden;
 }
 .checkbox__check {
+  width: 10px;
+  height: 10px;
   position: relative;
-  left: -10.8px;
+  left: -11px;
   top: 0.2px;
   -webkit-transition: left 0.1s;
   transition: left 0.1s;
@@ -147,7 +149,7 @@ html, body {
 }
 
 .checkbox__input:checked + .checkbox__box .checkbox__check {
-  left: 0.2px;
+  left: 0px;
 }
 
 .checkbox__input:focus-visible + .checkbox__box {
