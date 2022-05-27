@@ -1,0 +1,199 @@
+:root {
+    --input-P-color: #444;
+    --input-P-light-color: #f9f9f9;
+    --input-P-grey-color: #ccc;
+  
+    --input-S-color: #4D9FFF;
+    --input-S-light-color: #98C7FF;
+    --input-S-dark-color: #15457D;
+  }
+
+html,body{width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+
+// Radio
+.radio {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &__box {
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-sizing: border-box;
+        border: var(--input-S-color) solid 2px;
+    }
+
+    &__check {
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        position: relative;
+        left: -11px;
+        background: var(--input-S-color);
+        transition: left .1s;
+    }
+
+    &__input {
+        position: absolute;
+        appearance: none;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }   
+}
+
+.radio__input:checked + .radio__box .radio__check {
+    left: 0px;
+}
+
+.radio__input:focus-visible + .radio__box {
+    outline: 2px solid var(--input-P-color);
+}
+
+.radio__input:disabled + .radio__box {
+    background: var(--input-P-grey-color) !important;
+    border-color: var(--input-P-color) !important;
+
+    .radio__check {
+        background: var(--input-P-color) !important;
+    }
+}
+
+// Checkbox
+.checkbox {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &__box {
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        box-sizing: border-box;
+        border: var(--input-S-color) 2px solid;
+        overflow: hidden;
+    }
+
+    &__check {
+        position: relative;
+        left: -10.8px;
+        top: .2px;
+        transition: left .1s;
+        stroke: var(--input-S-color);
+    }
+
+    &__input {
+        position: absolute;
+        appearance: none;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+}
+
+.checkbox__input:checked + .checkbox__box .checkbox__check {
+    left: .2px;
+}
+
+.checkbox__input:focus-visible + .checkbox__box {
+    outline: 2px solid var(--input-P-color);
+}
+
+.checkbox__input:disabled + .checkbox__box {
+    background: var(--input-P-grey-color) !important;
+    border-color: var(--input-P-color) !important;
+
+    .checkbox__check {
+        stroke: var(--input-P-color) !important;
+    }
+}
+
+// Switch
+.switcher {
+    width: 40px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &__box {
+        width: 23px;
+        height: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--input-P-grey-color);
+        transition: background .1s;
+    }
+
+    &__check {
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        position: relative;
+        background: var(--input-P-light-color);
+        left: -8px;
+        transition: left .1s, background .1s;
+        box-shadow: 0px 0px 4px rgba(39, 39, 39, 0.35);
+        border-width: 0px;
+        border-color: var(--input-S-color);
+        border-style: solid;
+        box-sizing: border-box;
+    }
+
+    &__input {
+        position: absolute;
+        appearance: none;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+}
+
+.switcher__input:checked + .switcher__box {
+    background: var(--input-S-light-color);
+
+    .switcher__check {
+        background: var(--input-S-color);
+        left: 8px;
+        border-color: var(--input-P-light-color)
+    }
+}
+
+.switcher__input:focus-visible + .switcher__box .switcher__check {
+    border-width: 2px !important;
+}
+
+.switcher__input:disabled {
+    & + .switcher__box {
+        background: var(--input-P-color);
+    
+        .switcher__check {
+            background: var(--input-P-grey-color);
+        }   
+    }
+
+    &:checked + .switcher__box .switcher__check {
+        background: var(--input-S-dark-color)
+    }
+}
