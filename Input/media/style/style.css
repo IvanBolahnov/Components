@@ -165,7 +165,7 @@ html, body {
   stroke: var(--input-P-color) !important;
 }
 
-.switcher {
+.switch {
   width: 40px;
   height: 24px;
   display: -webkit-box;
@@ -179,7 +179,7 @@ html, body {
           align-items: center;
   cursor: pointer;
 }
-.switcher__box {
+.switch__box {
   width: 23px;
   height: 10px;
   border-radius: 5px;
@@ -196,7 +196,7 @@ html, body {
   -webkit-transition: background 0.1s;
   transition: background 0.1s;
 }
-.switcher__check {
+.switch__check {
   width: 14px;
   height: 14px;
   border-radius: 7px;
@@ -213,7 +213,7 @@ html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.switcher__input {
+.switch__input {
   position: absolute;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -224,25 +224,25 @@ html, body {
   clip: rect(0 0 0 0);
 }
 
-.switcher__input:checked + .switcher__box {
+.switch__input:checked + .switch__box {
   background: var(--input-S-light-color);
 }
-.switcher__input:checked + .switcher__box .switcher__check {
+.switch__input:checked + .switch__box .switch__check {
   background: var(--input-S-color);
   left: 8px;
   border-color: var(--input-P-light-color);
 }
 
-.switcher__input:focus-visible + .switcher__box .switcher__check {
+.switch__input:focus-visible + .switch__box .switch__check {
   border-width: 2px !important;
 }
 
-.switcher__input:disabled + .switcher__box {
+.switch__input:disabled + .switch__box {
   background: var(--input-P-color);
 }
-.switcher__input:disabled + .switcher__box .switcher__check {
+.switch__input:disabled + .switch__box .switch__check {
   background: var(--input-P-grey-color);
 }
-.switcher__input:disabled:checked + .switcher__box .switcher__check {
+.switch__input:disabled:checked + .switch__box .switch__check {
   background: var(--input-S-dark-color);
 }
